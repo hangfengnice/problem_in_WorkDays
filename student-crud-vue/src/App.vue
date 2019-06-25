@@ -13,18 +13,16 @@
 </template>
 
 <script>
-import AppNavbar from './components/common/Navbar.vue'
-import AppAside from './components/common/Aside.vue'
-
+import AppNavbar from "./components/common/Navbar.vue";
+import AppAside from "./components/common/Aside.vue";
 
 export default {
- components: {
+  components: {
     AppNavbar,
-   AppAside
- }
-}
+    AppAside
+  }
+};
 </script>
 
 <style scoped>
-
 </style>

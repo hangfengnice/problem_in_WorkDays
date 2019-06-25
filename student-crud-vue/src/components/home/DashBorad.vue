@@ -1,7 +1,7 @@
 <template>
   <div class="row placeholders">
     <div class="col-xs-6 col-sm-3 placeholder">
-<img src="" alt="">
+      <img src alt>
       <h4>label</h4>
       <span class="text-muted">something</span>
     </div>
@@ -9,11 +9,8 @@
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
 <style>
-
 </style>
