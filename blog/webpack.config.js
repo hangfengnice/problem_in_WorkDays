@@ -1,5 +1,7 @@
 let path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const webpack = require('webpack')
 
 module.exports = {
   mode: "development",
@@ -9,14 +11,25 @@ module.exports = {
     path: path.resolve(__dirname, "dist")
   },
   devServer: {
-    contentBase: "./dist",
-    open: true
+    contentBase: "./",
+    open: true,
+    hot: true
   },
+  externals: {
+    vue: 'Vue',
+    'vue-router': 'VueRouter',
+    axios: "axios"
+
+  },
+  
   plugins: [
     new HtmlWebpackPlugin({
       template: "./index.html",
       filename: "index.html"
-    })
+    }),
+    new VueLoaderPlugin(),
+    new webpack.NamedModulesPlugin(),
+    new webpack.HotModuleReplacementPlugin()
   ],
   module: {
     rules: [
@@ -48,6 +61,7 @@ module.exports = {
         use: {
           loader: "babel-loader",
           options: {
+            cacheDirectory: true,
             presets: ["@babel/preset-env"],
             plugins: [
               ["@babel/plugin-proposal-decorators", { legacy: true }],
@@ -56,6 +70,10 @@ module.exports = {
             ]
           }
         }
+      },
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader'
       }
     ]
   }

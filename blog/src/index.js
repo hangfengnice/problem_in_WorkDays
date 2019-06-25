@@ -1,16 +1,18 @@
+import Vue from 'vue'
+import App from './App.vue'
+import router from './router'
 
-import './main.css'
-import './main.less'
+new Vue({
+  el: "#app",
+  template: '<App/>',
+  components: {
+    App
+  },
+  router
 
-var fruits = ['hi']
-
-fruits.forEach(item => {
-  console.log(item)
 })
 
-var index = fruits.findIndex(function(item){
-  return item === 'hi'
-})
+
 
 
 
