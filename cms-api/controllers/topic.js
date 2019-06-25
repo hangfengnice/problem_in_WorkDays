@@ -1,6 +1,8 @@
 const Topic = require("../models/topic");
 const moment = require("moment");
 
+
+
 exports.list = (req, res, next) => {
   let _page = parseInt(req.query._page);
   let _limit = parseInt(req.query._limit);
@@ -28,7 +30,7 @@ exports.create = (req, res, next) => {
   const body = req.body;
 
   Topic.findOne({
-    title: body.title
+    title: body.content
   }).then((err, data) => {
     if (err) {
       return next(err);
@@ -41,7 +43,7 @@ exports.create = (req, res, next) => {
     }
     body.created_time = moment().format("YYYY-MM-DD hh:mm:ss");
     body.modified_time = moment().format("YYYY-MM-DD hh:mm:ss");
-    body.user_id = user.id;
+    body.user_id = user._id;
 
     new Topic(body).save((err, topic) => {
       if (err) {
@@ -53,6 +55,25 @@ exports.create = (req, res, next) => {
   });
 };
 
-exports.update = (req, res, next) => {};
+exports.update = (req, res, next) => {
 
-exports.delete = (req, res, next) => {};
+  const body = req.body
+  Topic.findByIdAndUpdate(req.params.id, body).then((data) => {
+    // 返回原来的值
+    res.status(200).json(data)
+  })
+};
+
+exports.delete = (req, res, next) => {
+  const {id} = req.params
+    Topic.deleteOne({
+      _id: id
+    }).then((err) => {
+      // if(err){
+      //   return next(err)
+      // }
+      res.status(200).json({})
+    })
+  
+ 
+};

@@ -6,9 +6,7 @@ const moment = require("moment");
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
-  id: {
-    type: Number
-  },
+
   email: {
     type: String,
     required: true

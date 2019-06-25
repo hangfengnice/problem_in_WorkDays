@@ -5,6 +5,7 @@ const topicController = require("./controllers/topic");
 const commentController = require("./controllers/comment");
 const sessionController = require("./controllers/session");
 const mongoose = require("mongoose");
+const Topic = require('./models/topic')
 
 mongoose.connect("mongodb://localhost:27017/cms", { useNewUrlParser: true });
 
@@ -15,6 +16,25 @@ function checkLogin(req, res, next) {
     });
   }
   next();
+}
+
+function checkTopic(req, res, next){
+  const {user} = req.session
+  Topic.findOne({
+    _id: req.params.id
+  }).then((data )=> {
+    if(!data){
+      return res.status(404).json({
+        error: "Topic not found"
+      })
+    }
+    if(data.user_id !== user._id){
+      return res.status(400).json({
+        error: "delete Invalid"
+      })
+    }
+   next()
+  })
 }
 // 用户资源
 router
@@ -27,15 +47,15 @@ router
 router
   .get("/topics", topicController.list)
   .post("/topics", checkLogin, topicController.create)
-  .patch("/topics/:id", checkLogin, topicController.update)
-  .delete("/topics/:id", checkLogin, topicController.delete);
+  .patch("/topics/:id", checkLogin, checkTopic, topicController.update)
+  .delete("/topics/:id", checkLogin, checkTopic, topicController.delete);
 
 // // 评论资源
 router
   .get("/comment", commentController.query)
-  .post("/comment", commentController.new)
-  .patch("/comment/:id", commentController.update)
-  .delete("/comment/:id", commentController.delete);
+  .post("/comment", checkLogin, commentController.new)
+  .patch("/comment/:id", checkLogin, commentController.update)
+  .delete("/comment/:id", checkLogin, commentController.delete);
 
 // // 会话资源
 

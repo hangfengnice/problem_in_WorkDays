@@ -1,7 +1,9 @@
 const User = require("../models/user");
 const moment = require("moment");
 
-exports.query = (req, res, next) => {};
+exports.query = (req, res, next) => {
+
+};
 
 exports.new = (req, res, next) => {
   // console.log(req.body)
@@ -32,7 +34,7 @@ exports.new = (req, res, next) => {
       if (err) {
         return next(err);
       }
-      // req.session.user = user;
+      body.id = user._id
       res.status(200).json(body);
     });
   });
