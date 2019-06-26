@@ -1,14 +1,12 @@
-{{extend './_layouts/home.html'}}
-
-{{block 'title'}}{{'博客'}}{{/block}}
-
-{{block 'body'}}
+<template>
+  <div>
+  <Header></Header>
 <section class="container">
   <ul class="media-list">
     <li class="media">
       <div class="media-left">
         <a href="#">
-            <img  width="40" height="40" class="media-object" src="../public/img/yingying.jpeg" alt="...">
+            <img  width="40" height="40" class="media-object" src="../../assets/img/avatar-default.png" alt="...">
           </a>
       </div>
       <div class="media-body">
@@ -19,7 +17,7 @@
     <li class="media">
       <div class="media-left">
         <a href="#">
-            <img  width="40" height="40" class="media-object" src="../public/img/yingying.jpeg" alt="...">
+            <img  width="40" height="40" class="media-object" src="../../assets/img/avatar-default.png" alt="...">
           </a>
       </div>
       <div class="media-body">
@@ -30,7 +28,7 @@
     <li class="media">
       <div class="media-left">
         <a href="#">
-            <img  width="40" height="40" class="media-object" src="../public/img/yingying.jpeg" alt="...">
+            <img  width="40" height="40" class="media-object" src="../../assets/img/avatar-default.png" alt="...">
           </a>
       </div>
       <div class="media-body">
@@ -41,7 +39,7 @@
     <li class="media">
       <div class="media-left">
         <a href="#">
-            <img  width="40" height="40" class="media-object" src="../public/img/yingying.jpeg" alt="...">
+            <img  width="40" height="40" class="media-object" src="../../assets/img/avatar-default.png" alt="...">
           </a>
       </div>
       <div class="media-body">
@@ -52,7 +50,7 @@
     <li class="media">
       <div class="media-left">
         <a href="#">
-            <img  width="40" height="40" class="media-object" src="../public/img/yingying.jpeg" alt="...">
+            <img  width="40" height="40" class="media-object" src="../../assets/img/avatar-default.png" alt="...">
           </a>
       </div>
       <div class="media-body">
@@ -63,7 +61,7 @@
     <li class="media">
       <div class="media-left">
         <a href="#">
-            <img  width="40" height="40" class="media-object" src="../public/img/yingying.jpeg" alt="...">
+            <img  width="40" height="40" class="media-object" src="../../assets/img/avatar-default.png" alt="...">
           </a>
       </div>
       <div class="media-body">
@@ -74,7 +72,7 @@
     <li class="media">
       <div class="media-left">
         <a href="#">
-            <img  width="40" height="40" class="media-object" src="../public/img/yingying.jpeg" alt="...">
+            <img  width="40" height="40" class="media-object" src="../../assets/img/avatar-default.png" alt="...">
           </a>
       </div>
       <div class="media-body">
@@ -85,7 +83,7 @@
     <li class="media">
       <div class="media-left">
         <a href="#">
-            <img  width="40" height="40" class="media-object" src="../public/img/yingying.jpeg" alt="...">
+            <img  width="40" height="40" class="media-object" src="../../assets/img/avatar-default.png" alt="...">
           </a>
       </div>
       <div class="media-body">
@@ -96,7 +94,7 @@
     <li class="media">
       <div class="media-left">
         <a href="#">
-            <img  width="40" height="40" class="media-object" src="../public/img/yingying.jpeg" alt="...">
+            <img  width="40" height="40" class="media-object" src="../../assets/img/avatar-default.png" alt="...">
           </a>
       </div>
       <div class="media-body">
@@ -107,7 +105,7 @@
     <li class="media">
       <div class="media-left">
         <a href="#">
-            <img  width="40" height="40" class="media-object" src="../public/img/yingying.jpeg" alt="...">
+            <img  width="40" height="40" class="media-object" src="../../assets/img/avatar-default.png" alt="...">
           </a>
       </div>
       <div class="media-body">
@@ -118,7 +116,7 @@
     <li class="media">
       <div class="media-left">
         <a href="#">
-            <img  width="40" height="40" class="media-object" src="../public/img/yingying.jpeg" alt="...">
+            <img  width="40" height="40" class="media-object" src="../../assets/img/avatar-default.png" alt="...">
           </a>
       </div>
       <div class="media-body">
@@ -129,7 +127,7 @@
     <li class="media">
       <div class="media-left">
         <a href="#">
-            <img  width="40" height="40" class="media-object" src="../public/img/yingying.jpeg" alt="...">
+            <img  width="40" height="40" class="media-object" src="../../assets/img/avatar-default.png" alt="...">
           </a>
       </div>
       <div class="media-body">
@@ -140,7 +138,7 @@
     <li class="media">
       <div class="media-left">
         <a href="#">
-            <img  width="40" height="40" class="media-object" src="../public/img/yingying.jpeg" alt="...">
+            <img  width="40" height="40" class="media-object" src="../../assets/img/avatar-default.png" alt="...">
           </a>
       </div>
       <div class="media-body">
@@ -151,7 +149,7 @@
     <li class="media">
       <div class="media-left">
         <a href="#">
-            <img  width="40" height="40" class="media-object" src="../public/img/yingying.jpeg" alt="...">
+            <img  width="40" height="40" class="media-object" src="../../assets/img/avatar-default.png" alt="...">
           </a>
       </div>
       <div class="media-body">
@@ -162,7 +160,7 @@
     <li class="media">
       <div class="media-left">
         <a href="#">
-            <img  width="40" height="40" class="media-object" src="../public/img/yingying.jpeg" alt="...">
+            <img  width="40" height="40" class="media-object" src="../../assets/img/avatar-default.png" alt="...">
           </a>
       </div>
       <div class="media-body">
@@ -173,7 +171,7 @@
     <li class="media">
       <div class="media-left">
         <a href="#">
-            <img  width="40" height="40" class="media-object" src="../public/img/yingying.jpeg" alt="...">
+            <img  width="40" height="40" class="media-object" src="../../assets/img/avatar-default.png" alt="...">
           </a>
       </div>
       <div class="media-body">
@@ -184,7 +182,7 @@
     <li class="media">
       <div class="media-left">
         <a href="#">
-            <img  width="40" height="40" class="media-object" src="../public/img/yingying.jpeg" alt="...">
+            <img  width="40" height="40" class="media-object" src="../../assets/img/avatar-default.png" alt="...">
           </a>
       </div>
       <div class="media-body">
@@ -195,7 +193,7 @@
     <li class="media">
       <div class="media-left">
         <a href="#">
-            <img  width="40" height="40" class="media-object" src="../public/img/yingying.jpeg" alt="...">
+            <img  width="40" height="40" class="media-object" src="../../assets/img/avatar-default.png" alt="...">
           </a>
       </div>
       <div class="media-body">
@@ -206,7 +204,7 @@
     <li class="media">
       <div class="media-left">
         <a href="#">
-            <img  width="40" height="40" class="media-object" src="../public/img/yingying.jpeg" alt="...">
+            <img  width="40" height="40" class="media-object" src="../../assets/img/avatar-default.png" alt="...">
           </a>
       </div>
       <div class="media-body">
@@ -217,7 +215,7 @@
     <li class="media">
       <div class="media-left">
         <a href="#">
-            <img  width="40" height="40" class="media-object" src="../public/img/yingying.jpeg" alt="...">
+            <img  width="40" height="40" class="media-object" src="../../assets/img/avatar-default.png" alt="...">
           </a>
       </div>
       <div class="media-body">
@@ -246,4 +244,22 @@
     </ul>
   </nav>
 </section>
-{{/block}}
+  <Footer></Footer>
+  </div>
+</template>
+
+<script>
+import Header from './Header.vue'
+import Footer from './Footer.vue'
+
+export default {
+  components: {
+    Header,
+    Footer
+  }
+}
+</script>
+
+<style>
+  
+</style>

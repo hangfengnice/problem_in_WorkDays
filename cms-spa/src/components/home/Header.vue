@@ -1,4 +1,5 @@
-<nav class="navbar navbar-default">
+<template>
+  <nav class="navbar navbar-default">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -10,7 +11,7 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="/">
-                <img width="50px" src="/public/img/github.jpeg" alt="">
+                <img width="50px" src="../../assets/img/github.jpeg" alt="">
             </a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -37,15 +38,15 @@
                 </div>
             </form>
             <ul class="nav navbar-nav navbar-right">
-                {{ if user }}
-                <a class="btn btn-default navbar-btn" href="/topics/new">发起</a>
+                
+                <a class="btn btn-default navbar-btn" href="/#/topics/new">发起</a>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                        aria-expanded="false"><img width="20" height="20" src="/public/img/hangfeng.jpeg" alt="">
+                        aria-expanded="false"><img width="20" height="20" src="../../assets/img/avatar-default.png" alt="">
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li class="dropdown-current-user">
-                            当前登录用户: {{ user.nickname }}
+                            当前登录用户: 
                         </li>
                         <li role="separator" class="divider"></li>
                         <li><a href="#">个人主页</a></li>
@@ -53,13 +54,35 @@
                         <li><a href="/logout">退出</a></li>
                     </ul>
                 </li>
-                {{ else }}
-                <a class="btn btn-primary navbar-btn" href="/login">登录</a>
-                <a class="btn btn-success navbar-btn" href="/register">注册</a>
-                {{ /if }}
+
+                <a class="btn btn-primary navbar-btn" href="/#/login">登录</a>
+                <a class="btn btn-success navbar-btn" href="/#/register">注册</a>
+
             </ul>
         </div>
         <!-- /.navbar-collapse -->
     </div>
     <!-- /.container-fluid -->
 </nav>
+</template>
+
+<script>
+export default {
+
+}
+</script>
+
+<style scoped>
+.dropdown-current-user {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 5px;
+}
+
+.navbar-default .navbar-nav>.open>a,
+.navbar-default .navbar-nav>.open>a:hover,
+.navbar-default .navbar-nav>.open>a:focus {
+  background: none;
+}
+
+</style>

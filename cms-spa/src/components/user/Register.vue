@@ -1,22 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>博客</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/public/css/login.css" />
-  </head>
-
-  <body>
-    <div class="main">
+<template>
+  <div class="main">
       <div class="header">
         <a href="/">
-          <img width="100" height="70" src="/public/img/github.jpeg" alt="" />
+          <img width="100" height="70" src="../../assets/img/github.jpeg" alt="" />
         </a>
         <h1>用户注册</h1>
       </div>
@@ -57,12 +43,12 @@
         <button type="submit" class="btn btn-success btn-block">注册</button>
       </form>
       <div class="message">
-        <p>已有账号？<a href="/login">点击登录</a>.</p>
+        <p>已有账号？<a href="/#/login">点击登录</a>.</p>
       </div>
     </div>
     <!-- <script src="/node_modules/jquery/dist/jquery.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
-    <script>
+
+    <!-- <script>
       $("#register_form").on("submit", function(e) {
         e.preventDefault();
         var formData = $(this).serialize();
@@ -84,6 +70,48 @@
           }
         });
       });
-    </script>
-  </body>
-</html>
+    </script> -->
+</template>
+
+<script>
+export default {
+
+}
+</script>
+
+<style scoped>
+body {
+  background-color: #f9f9f9;
+}
+
+.main {
+  width: 340px;
+  margin: 0 auto;
+  margin-top: 50px;
+  color: #333;
+}
+
+.main .header {
+  text-align: center;
+}
+
+.main .header h1 {
+  font-size: 26px;
+}
+
+.main form {
+  padding: 20px;
+  margin-bottom: 15px;
+  border: 1px solid #d8dee2;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.main .message {
+  padding: 10px;
+  padding-bottom: 0;
+  border: 1px solid #d8dee2;
+  border-radius: 5px;
+}
+
+</style>

@@ -1,10 +1,6 @@
-{{extend '../_layouts/home.html'}}
-
-{{block 'title'}}{{'多人博客 - 首页'}}{{/block}}
-
-{{block 'body'}}
-<section class="container">
-  {{include '../_partials/settings-nav.html'}}
+<template>
+  <section class="container">
+<SetNav></SetNav>
   <div class="col-md-5">
     <form>
       <div class="form-group">
@@ -52,4 +48,17 @@
     </dl>
   </div>
 </section>
-{{/block}}
+</template>
+
+<script>
+import SetNav from './SetNav'
+export default {
+components: {
+  SetNav
+}
+}
+</script>
+
+<style>
+
+</style>
