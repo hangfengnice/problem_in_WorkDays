@@ -53,3 +53,7 @@
 - 5日
   1. 图片没有高度不会显示 a. 定高 b. js取高
   2. 自己搜索还是有点累的
+- 6日
+  1. 有被放羊的嫌疑，
+  2. animate.css hover.css lodash.js underscore.js wow.js
+  3. 打字速度有一定的提高
