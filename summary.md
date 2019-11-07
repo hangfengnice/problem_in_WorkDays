@@ -57,3 +57,6 @@
   1. 有被放羊的嫌疑，
   2. animate.css hover.css lodash.js underscore.js wow.js
   3. 打字速度有一定的提高
+- 7日
+  1. 做了下响应式的网站开发
+  2. 有点贪心 啥都想学 啥都没学好
